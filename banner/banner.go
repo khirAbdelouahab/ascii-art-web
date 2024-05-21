@@ -46,14 +46,14 @@ func Result(words []string, newLineCounter int, banner map[int][]string) string 
 	for _, word := range words {
 		if word == "" && counter <= newLineCounter {
 			//fmt.Println()
-			result += "<br/>"
+			result += "\n"
 			counter++
 			continue
 		}
 		for i := 0; i < 8; i++ {
 			for j, char := range word {
 				if j == len(word)-1 {
-					result += banner[int(char)][i] + "<br/>"
+					result += banner[int(char)][i] + "\n"
 					//fmt.Println()
 					continue
 				}
